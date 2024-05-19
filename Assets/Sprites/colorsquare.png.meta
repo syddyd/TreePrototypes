@@ -1,0 +1,1535 @@
+fileFormatVersion: 2
+guid: a582508dd4e80f643a12f60638692108
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 28
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: colorsquare_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 193.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed2b1f764bfc7c542bb72266730aa706
+      internalID: -875176017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_1
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 193.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d2e413fd1b5450409665d48e88a8a00
+      internalID: -1661408623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_2
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 193.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07183c7a53db04f458b2205c2f205829
+      internalID: -1081881850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_3
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 193.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d141688aa69f5348964c18138f4f227
+      internalID: -1342997957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_4
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 193.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b2ac469755c7404fbee487595184733
+      internalID: -1054988139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_5
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 193.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b642d19ac1eb5488962ce1277a1743
+      internalID: -1074592624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_6
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 193.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adac38ce98bb0244aabdad1536cd7aea
+      internalID: 1657683858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_7
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 193.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35f281ac408a40f41b17a11ad860fcbc
+      internalID: 1457147235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 166.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 501853b3a941b2646a0f141f0590507a
+      internalID: -583729483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 166.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57703a33a3a54764ebd493a68ec21971
+      internalID: -870475691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_10
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 166.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdee14ab358adf54993bad6e3fbecb1f
+      internalID: -383108298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_11
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 166.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f7c26a22650c2f4b95e098fa849688a
+      internalID: 486297334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_12
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 166.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde57e7ab2d4bbe4c8ea257a4375b623
+      internalID: -348793190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_13
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 166.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 238767ecc39ea934b975ee69bbb033f2
+      internalID: -637900966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 166.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45152b0f9b20d9a4aac7d2722826e7e0
+      internalID: -1366445227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_15
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 166.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c43cf0d613b7ec7489f9ed87edc37979
+      internalID: -632932477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 139.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d7c3cb88d282a4bbbc0286ed5b33b0
+      internalID: 1542319657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_17
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 139.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061ee76ac9aa87b41b2a0ced29b2e40b
+      internalID: 1066883787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_18
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 139.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5699ae1bc1f4d9b4d9edbf0afa59aaca
+      internalID: -989087717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_19
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 139.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 807917f0991ba394490e7c3849eb6c6e
+      internalID: 1742780417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_20
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 139.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c76ec5f715aca94b9d2d0ba6aef733c
+      internalID: -2016829869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_21
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 139.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70b1d8e67c74590469840539810315c9
+      internalID: 71731370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_22
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 139.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c821e0048644a9d499ca2b24ca1f3e7f
+      internalID: -289404299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_23
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 139.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c035f0ce0d14c554ab84d6c40979d87f
+      internalID: 566081726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fd8224a7464b1c4ea5d2ed673fa03b8
+      internalID: 1996182380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_25
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 112.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de6a8d4de99cd454794a643a84ca18db
+      internalID: -1610209212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_26
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 112.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c95814a5a794c4ca3748463c85701c
+      internalID: 326901297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_27
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 112.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 219c7789932d51c4c990462e67c07b0e
+      internalID: -1526309543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_28
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 112.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 046b495d439e2e8488f8e85dcd0cc01a
+      internalID: -572544096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_29
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 112.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f96c0221bad6e74ab23a096e81d89e3
+      internalID: -1125728452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_30
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 112.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e18021d2249a64e97161133f550de5
+      internalID: -1326292426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_31
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 112.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd85621b527b40e4c9abf6c386e36bd5
+      internalID: -724138734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 85.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65a2df894c8e8f6428cdf2a960ba78e7
+      internalID: -1508282858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_33
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 85.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3815d779e844f9143b778c26f9280d1e
+      internalID: -1310412559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_34
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 85.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aa157a0199e51e4bb4ef9772d69775d
+      internalID: 539974742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_35
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 85.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b7c4dcb988a2234da8b0edd54627e95
+      internalID: -149521849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_36
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 85.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afae1754a15a2754caccc3e88f24ad66
+      internalID: 1596448044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_37
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 85.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e8979b86f1434645ab23c7a4ef4eabc
+      internalID: 126429367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_38
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 85.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96b06e3592d3e854c923e82c80ebd782
+      internalID: 848917016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_39
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 85.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b4270f9574fa348b9093a658935d00
+      internalID: -1233890043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 58.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead32172fa819c74caa2ad2e2a9dc6e4
+      internalID: 1025606999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_41
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 58.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97696ac0d40c5914fa456c6b25552708
+      internalID: -716872983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_42
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 58.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a353165eb4e04343a4967ddd097b1e6
+      internalID: 1820992192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_43
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 58.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a83714f3163fbcb47b7fe866cb707c51
+      internalID: 336877004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_44
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 58.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de8d38cb833fd244ca908a4708155526
+      internalID: 1037207197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_45
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 58.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 651d967cabe438b4da27792afde94787
+      internalID: 844342714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_46
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 58.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f915825a81f4184086e4ab2bc98dc0c
+      internalID: 285131905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_47
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 58.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4964f58dbac5b1f46b380140927fc5e8
+      internalID: -423494408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 31.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf597e50fc27f6c4fbb9dff692ae277e
+      internalID: 650919658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 31.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a47964066c5324e839256c610faef6
+      internalID: -1053139291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_50
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 31.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b37c7f2711f8114c8484624564e9e4d
+      internalID: -338754796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_51
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 31.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24183a15ff1169f409ac4843fc004786
+      internalID: 1151387378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_52
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 31.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e7deb38d1f742b41980421a16fd381e
+      internalID: 1504785100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_53
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 31.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14fdbb31f5abe4745b3a32ca11bb1b3f
+      internalID: -829302078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yellow
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 31
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8256a42901e61b4d90c76f36d86b690
+      internalID: 892559548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_55
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 31.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93a104de50f0cfb4483ff10fa1845ea1
+      internalID: 1422532878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59a06fe73661bd749b38fb832d009678
+      internalID: 414077573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_57
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 4.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef0bdf40ca71270469b15166736e4181
+      internalID: 1386880883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_58
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 4.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe1047f505def348afa44a3da0c7428
+      internalID: 241853183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_59
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 4.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19aec4d92f015da42849ce57ba603c63
+      internalID: 1044824774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_60
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 4.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ecc26459ffd36145b80a6f131756f8a
+      internalID: -316672581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_61
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 4.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a0cc768b300b0348884471fccc8a81c
+      internalID: -1403472089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_62
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 4.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af2b765a75c8d274b8231fe933c2dbcc
+      internalID: -1133326959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: colorsquare_63
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 4.375
+        width: 28.375
+        height: 27.625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 049e64f7d3ee0b74c9ffa00176033d10
+      internalID: 777648998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      blue: -870475691
+      colorsquare_0: -875176017
+      colorsquare_1: -1661408623
+      colorsquare_10: -383108298
+      colorsquare_11: 486297334
+      colorsquare_12: -348793190
+      colorsquare_13: -637900966
+      colorsquare_15: -632932477
+      colorsquare_16: 1542319657
+      colorsquare_17: 1066883787
+      colorsquare_18: -989087717
+      colorsquare_19: 1742780417
+      colorsquare_2: -1081881850
+      colorsquare_20: -2016829869
+      colorsquare_21: 71731370
+      colorsquare_22: -289404299
+      colorsquare_23: 566081726
+      colorsquare_24: 1996182380
+      colorsquare_25: -1610209212
+      colorsquare_26: 326901297
+      colorsquare_27: -1526309543
+      colorsquare_28: -572544096
+      colorsquare_29: -1125728452
+      colorsquare_3: -1342997957
+      colorsquare_30: -1326292426
+      colorsquare_31: -724138734
+      colorsquare_32: -1508282858
+      colorsquare_33: -1310412559
+      colorsquare_34: 539974742
+      colorsquare_35: -149521849
+      colorsquare_36: 1596448044
+      colorsquare_37: 126429367
+      colorsquare_38: 848917016
+      colorsquare_39: -1233890043
+      colorsquare_4: -1054988139
+      colorsquare_40: 1025606999
+      colorsquare_41: -716872983
+      colorsquare_42: 1820992192
+      colorsquare_43: 336877004
+      colorsquare_44: 1037207197
+      colorsquare_45: 844342714
+      colorsquare_46: 285131905
+      colorsquare_47: -423494408
+      colorsquare_48: 650919658
+      colorsquare_5: -1074592624
+      colorsquare_50: -338754796
+      colorsquare_51: 1151387378
+      colorsquare_52: 1504785100
+      colorsquare_53: -829302078
+      colorsquare_55: 1422532878
+      colorsquare_56: 414077573
+      colorsquare_57: 1386880883
+      colorsquare_58: 241853183
+      colorsquare_59: 1044824774
+      colorsquare_6: 1657683858
+      colorsquare_60: -316672581
+      colorsquare_61: -1403472089
+      colorsquare_62: -1133326959
+      colorsquare_63: 777648998
+      colorsquare_7: 1457147235
+      colorsquare_8: -583729483
+      green: -1053139291
+      red: -1366445227
+      yellow: 892559548
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
