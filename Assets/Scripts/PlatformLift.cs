@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using HutongGames.PlayMaker;
 using UnityEngine;
 
 public class PlatformLift : MonoBehaviour
@@ -38,15 +39,14 @@ public class PlatformLift : MonoBehaviour
             {
                 target = new Vector2(player.transform.position.x, surface);
             }
-            
-            StartCoroutine(LiftPlayer(target));
+            player.SendMessage("GrabPlatform", target);
+            //StartCoroutine(LiftPlayer(target));
         }
     }
 
-    private IEnumerator LiftPlayer(Vector2 target)
+    /*private IEnumerator LiftPlayer(Vector2 target)
     {
         print("lifting");
-        player.GetComponent<PlayerController>().setMoveable(false);
         thisCollider.isTrigger = true;
         while (Math.Abs(player.transform.position.x - target.x) > 0.2 || Math.Abs(player.transform.position.y - target.y) > 0.2)
         {
@@ -55,6 +55,5 @@ public class PlatformLift : MonoBehaviour
             yield return null;
         }
         thisCollider.isTrigger = false;
-        player.GetComponent<PlayerController>().setMoveable(true);
-    }
+    }*/
 }

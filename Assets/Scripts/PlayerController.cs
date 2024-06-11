@@ -87,20 +87,27 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = new Vector2(moveDirection * moveSpeed, rb.velocity.y);
             }
         }
-        else
+    }
+
+    public void GrabPlatform(Vector2 target){
+        print("got message");
+        moveAble = false;
+        StartCoroutine(LiftPlatform(target));
+    }
+
+    private IEnumerator LiftPlatform(Vector2 target){
+        while (Math.Abs(transform.position.x - target.x) > 0.1 || Math.Abs(transform.position.y - target.y) > 0.1)
         {
-            rb.velocity = Vector2.zero;
+            print("passed condition");
+            Vector3.MoveTowards(transform.position, target, Time.deltaTime);
+            yield return null;
         }
+        moveAble = true;
     }
 
     private bool isGrounded()
     {
         //Debug.DrawLine(trans.position, new Vector3(trans.position.x, trans.position.y -10f, trans.position.z), Color.red);
         return Physics2D.Raycast(trans.position, Vector2.down, 1.6f, 8);
-    }
-
-    public void setMoveable(bool move)
-    {
-        moveAble = move;
     }
 }
