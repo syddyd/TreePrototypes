@@ -11,22 +11,22 @@ public class PlatformLift : MonoBehaviour
     private float surface;
     Vector2 target;
     GameObject player;
-    Collider2D thisCollider;
+    private bool fireAble = true;
     
     void Awake()
     {
         leftSide = transform.position.x - transform.lossyScale.x / 2;
         rightSide = transform.position.x + transform.lossyScale.x / 2;
-        surface = transform.position.y + transform.lossyScale.y / 2 + 0.1f;
-        thisCollider = gameObject.GetComponent<Collider2D>();
+        surface = transform.position.y + transform.lossyScale.y / 2 + 0.15f;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         print("collision");
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && fireAble)
         {
             player = collision.gameObject;
+            surface += player.transform.lossyScale.y/2f;
             if (player.transform.position.x < leftSide)
             {
                 target = new Vector2(leftSide, surface);
@@ -39,21 +39,8 @@ public class PlatformLift : MonoBehaviour
             {
                 target = new Vector2(player.transform.position.x, surface);
             }
+            fireAble = false;
             player.SendMessage("GrabPlatform", target);
-            //StartCoroutine(LiftPlayer(target));
         }
     }
-
-    /*private IEnumerator LiftPlayer(Vector2 target)
-    {
-        print("lifting");
-        thisCollider.isTrigger = true;
-        while (Math.Abs(player.transform.position.x - target.x) > 0.2 || Math.Abs(player.transform.position.y - target.y) > 0.2)
-        {
-            print("passed condition");
-            Vector3.MoveTowards(player.transform.position, target, Time.deltaTime);
-            yield return null;
-        }
-        thisCollider.isTrigger = false;
-    }*/
 }

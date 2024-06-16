@@ -6,6 +6,7 @@ using UnityEngine.InputSystem.iOS;
 using HutongGames.PlayMaker;
 using Unity.VisualScripting;
 using System;
+using HutongGames.PlayMaker.Actions;
 
 public class PlayerController : MonoBehaviour
 {
@@ -15,7 +16,9 @@ public class PlayerController : MonoBehaviour
     private float groundMove;
     private float airMove;
     private bool moveAble;
+    private Vector2 target;
 
+    [SerializeField] public float lerpRate = 4f;
     [Range(0.1f, 10f)] public float jumpPower;
     public float fallMultiplier = 1.1f;
     [Range(0.1f, 100f)] public float moveSpeed;
@@ -30,26 +33,29 @@ public class PlayerController : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         groundMove = context.ReadValue<Vector2>().x;
-        airMove = groundMove/2f;
+        airMove = groundMove / 2f;
     }
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (isGrounded())
+        if (moveAble)
         {
-            if (context.canceled)
+            if (isGrounded())
             {
-                print("low jump");
-                rb.velocity += Vector2.up * jumpPower * 0.5f;
+                if (context.canceled)
+                {
+                    print("low jump");
+                    rb.velocity += Vector2.up * jumpPower * 0.5f;
+                }
+                else
+                {
+                    rb.velocity += Vector2.up * jumpPower;
+                }
             }
             else
             {
-                rb.velocity += Vector2.up * jumpPower;
+                StartCoroutine(JumpMemorizer(context));
             }
-        }
-        else
-        {
-            StartCoroutine(JumpMemorizer(context));
         }
     }
 
@@ -75,7 +81,9 @@ public class PlayerController : MonoBehaviour
             if (!isGrounded())
             {
                 moveDirection = airMove;
-            } else {
+            }
+            else
+            {
                 moveDirection = groundMove;
             }
             if (rb.velocity.y < 0)
@@ -89,19 +97,28 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void GrabPlatform(Vector2 target){
+    public void GrabPlatform(Vector2 targetE)
+    {
         print("got message");
         moveAble = false;
+        target = targetE;
         StartCoroutine(LiftPlatform(target));
     }
 
-    private IEnumerator LiftPlatform(Vector2 target){
-        while (Math.Abs(transform.position.x - target.x) > 0.1 || Math.Abs(transform.position.y - target.y) > 0.1)
+    private IEnumerator LiftPlatform(Vector2 target)
+    {
+        print(target.x + "," + target.y);
+        float t = 0;
+        Vector2 start = transform.position;
+        while (t < 1)
         {
             print("passed condition");
-            Vector3.MoveTowards(transform.position, target, Time.deltaTime);
+            t += lerpRate * Time.deltaTime;
+            transform.position = Vector2.Lerp(start, target, t);
             yield return null;
         }
+        transform.position = target;
+        print("target hit");
         moveAble = true;
     }
 
