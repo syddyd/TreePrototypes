@@ -11,22 +11,21 @@ public class PlatformLift : MonoBehaviour
     private float surface;
     Vector2 target;
     GameObject player;
-    private bool fireAble = true;
     
     void Awake()
     {
         leftSide = transform.position.x - transform.lossyScale.x / 2;
         rightSide = transform.position.x + transform.lossyScale.x / 2;
-        surface = transform.position.y + transform.lossyScale.y / 2 + 0.15f;
+        surface = transform.position.y + transform.lossyScale.y / 2 + 1.6f;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        gameObject.SetActive(false);
         print("collision");
-        if (collision.gameObject.CompareTag("Player") && fireAble)
+        if (collision.gameObject.CompareTag("Player"))
         {
             player = collision.gameObject;
-            surface += player.transform.lossyScale.y/2f;
             if (player.transform.position.x < leftSide)
             {
                 target = new Vector2(leftSide, surface);
@@ -39,8 +38,8 @@ public class PlatformLift : MonoBehaviour
             {
                 target = new Vector2(player.transform.position.x, surface);
             }
-            fireAble = false;
             player.SendMessage("GrabPlatform", target);
+            gameObject.SetActive(true);
         }
     }
 }

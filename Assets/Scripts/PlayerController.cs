@@ -16,7 +16,6 @@ public class PlayerController : MonoBehaviour
     private float groundMove;
     private float airMove;
     private bool moveAble;
-    private Vector2 target;
 
     [SerializeField] public float lerpRate = 4f;
     [Range(0.1f, 10f)] public float jumpPower;
@@ -97,29 +96,28 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void GrabPlatform(Vector2 targetE)
+    public void GrabPlatform(Vector2 target)
     {
-        print("got message");
-        moveAble = false;
-        target = targetE;
-        StartCoroutine(LiftPlatform(target));
+        if (!isGrounded())
+        {
+            moveAble = false;
+            StartCoroutine(LiftPlatform(target));
+        }
     }
 
     private IEnumerator LiftPlatform(Vector2 target)
     {
-        print(target.x + "," + target.y);
         float t = 0;
         Vector2 start = transform.position;
-        while (t < 1)
+        while (t < 0.99f)
         {
-            print("passed condition");
+            print(target.x+","+target.y);
             t += lerpRate * Time.deltaTime;
             transform.position = Vector2.Lerp(start, target, t);
             yield return null;
         }
-        transform.position = target;
-        print("target hit");
         moveAble = true;
+        transform.position = target;
     }
 
     private bool isGrounded()
