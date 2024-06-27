@@ -16,7 +16,7 @@ public class PlatformLift : MonoBehaviour
     {
         leftSide = transform.position.x - transform.lossyScale.x / 2;
         rightSide = transform.position.x + transform.lossyScale.x / 2;
-        surface = transform.position.y + transform.lossyScale.y / 2 + 1.6f;
+        surface = transform.position.y + transform.lossyScale.y / 2;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

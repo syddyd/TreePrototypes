@@ -12,10 +12,15 @@ public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
     private Transform trans;
+    public BoxCollider2D boxCollider;
+    public Animator animator; 
+    public SpriteRenderer sprite;
+
     private float moveDirection;
     private float groundMove;
     private float airMove;
     private bool moveAble;
+    private float yScale;
 
     [SerializeField] public float lerpRate = 4f;
     [Range(0.1f, 10f)] public float jumpPower;
@@ -25,6 +30,10 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
+        yScale = boxCollider.size.y/2f + Math.Abs(boxCollider.offset.y);
+        animator = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
         trans = rb.transform;
         moveAble = true;
     }
@@ -94,12 +103,16 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = new Vector2(moveDirection * moveSpeed, rb.velocity.y);
             }
         }
+            
+        sprite.flipX = rb.velocity.x < 0;
+        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
     }
 
     public void GrabPlatform(Vector2 target)
     {
         if (!isGrounded())
         {
+            target = target + new Vector2(0, yScale +0.1f);
             moveAble = false;
             StartCoroutine(LiftPlatform(target));
         }
@@ -111,7 +124,6 @@ public class PlayerController : MonoBehaviour
         Vector2 start = transform.position;
         while (t < 0.99f)
         {
-            print(target.x+","+target.y);
             t += lerpRate * Time.deltaTime;
             transform.position = Vector2.Lerp(start, target, t);
             yield return null;
@@ -123,6 +135,6 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded()
     {
         //Debug.DrawLine(trans.position, new Vector3(trans.position.x, trans.position.y -10f, trans.position.z), Color.red);
-        return Physics2D.Raycast(trans.position, Vector2.down, 1.6f, 8);
+        return Physics2D.Raycast(trans.position, Vector2.down, yScale +0.1f, 8);
     }
 }
