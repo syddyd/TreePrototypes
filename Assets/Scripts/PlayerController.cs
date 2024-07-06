@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     private float airMove;
     private bool moveAble;
     private float yScale;
+    public int hp = 10;
 
     [SerializeField] public float lerpRate = 4f;
     [Range(0.1f, 10f)] public float jumpPower;
@@ -136,5 +137,10 @@ public class PlayerController : MonoBehaviour
     {
         //Debug.DrawLine(trans.position, new Vector3(trans.position.x, trans.position.y -10f, trans.position.z), Color.red);
         return Physics2D.Raycast(trans.position, Vector2.down, yScale +0.1f, 8);
+    }
+
+    public int TakeDamage(int hit){
+        hp -= hit;
+        return hit;
     }
 }
