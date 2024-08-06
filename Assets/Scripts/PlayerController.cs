@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] public float lerpRate = 4f;
     [Range(0.1f, 10f)] public float jumpPower;
+
+    [Range(0.1f, 10f)] public float crouchcheck;
     public float fallMultiplier = 1.1f;
     [Range(0.1f, 100f)] public float moveSpeed;
 
@@ -66,6 +68,17 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(JumpMemorizer(context));
             }
         }
+    }
+
+    public void Crouch(InputAction.CallbackContext context){
+        //want to pick a point thats like, player.transform.lossyscale.y - 10, and if there's only background there lerp to it 
+        RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + Vector2.down*crouchcheck, Vector2.down, 1,8);
+        if (hit == false){
+            moveAble = false;
+            transform.position = Vector2.Lerp(transform.position, Vector2.down*crouchcheck, 1);
+            moveAble = true;
+        }
+        print(hit.ToString());
     }
 
     //Method which accounts for the case where the player presses button too early 
@@ -121,6 +134,7 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator LiftPlatform(Vector2 target)
     {
+        Debug.Log("platform lift");
         float t = 0;
         Vector2 start = transform.position;
         while (t < 0.99f)
@@ -143,4 +157,11 @@ public class PlayerController : MonoBehaviour
         hp -= hit;
         return hit;
     }
+
+    public void Bounce(){
+        rb.velocity += Vector2.up *jumpPower *1.5f;
+        Debug.Log("bounced");
+    }
+
+
 }

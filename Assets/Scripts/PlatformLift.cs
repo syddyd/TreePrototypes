@@ -21,8 +21,6 @@ public class PlatformLift : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        gameObject.SetActive(false);
-        print("collision");
         if (collision.gameObject.CompareTag("Player"))
         {
             player = collision.gameObject;
@@ -39,7 +37,6 @@ public class PlatformLift : MonoBehaviour
                 target = new Vector2(player.transform.position.x, surface);
             }
             player.SendMessage("GrabPlatform", target);
-            gameObject.SetActive(true);
         }
     }
 }
