@@ -10,7 +10,7 @@ public class raycastVisualizer : MonoBehaviour
     private Transform trans;
     void Start()
     {
-        scale = controller.crouchcheck;
+        scale = 4;
         trans = GetComponent<Transform>();
         print("visualizer "+ scale);
     }

@@ -6836,6 +6836,10 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3853941486527183306, guid: b675dc7028a517c4593704dacfe1b1af, type: 3}
+      propertyPath: crouchcheck
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3853941486527183306, guid: b675dc7028a517c4593704dacfe1b1af, type: 3}
       propertyPath: fallMultiplier
       value: 3.5
       objectReference: {fileID: 0}

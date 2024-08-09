@@ -21,12 +21,13 @@ public class PlayerController : MonoBehaviour
     private float airMove;
     private bool moveAble;
     private float yScale;
-    public int hp = 10;
+    private int crouched = 0;
 
+    public int hp = 10;
     [SerializeField] public float lerpRate = 4f;
     [Range(0.1f, 10f)] public float jumpPower;
 
-    [Range(0.1f, 10f)] public float crouchcheck;
+    public float crouchcheck = 4;
     public float fallMultiplier = 1.1f;
     [Range(0.1f, 100f)] public float moveSpeed;
 
@@ -72,13 +73,14 @@ public class PlayerController : MonoBehaviour
 
     public void Crouch(InputAction.CallbackContext context){
         //want to pick a point thats like, player.transform.lossyscale.y - 10, and if there's only background there lerp to it 
-        RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + Vector2.down*crouchcheck, Vector2.down, 1,8);
-        if (hit == false){
+        RaycastHit2D hit = Physics2D.Raycast((Vector2)trans.position + Vector2.down*crouchcheck, Vector2.down, 1,8);
+        if (hit == false && isGrounded()){
             moveAble = false;
-            transform.position = Vector2.Lerp(transform.position, Vector2.down*crouchcheck, 1);
+            trans.position = Vector2.Lerp(trans.position, (Vector2)trans.position + Vector2.down*crouchcheck, 1);
             moveAble = true;
         }
-        print(hit.ToString());
+        print(hit == false);
+        crouched = 10;
     }
 
     //Method which accounts for the case where the player presses button too early 
@@ -117,6 +119,11 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = new Vector2(moveDirection * moveSpeed, rb.velocity.y);
             }
         }
+
+        if (crouched > 0)
+        {
+            crouched --;
+        }
             
         sprite.flipX = rb.velocity.x < 0;
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
@@ -124,7 +131,7 @@ public class PlayerController : MonoBehaviour
 
     public void GrabPlatform(Vector2 target)
     {
-        if (!isGrounded())
+        if (!isGrounded() && crouched == 0)
         {
             target = target + new Vector2(0, yScale +0.1f);
             moveAble = false;
