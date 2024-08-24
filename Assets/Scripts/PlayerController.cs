@@ -15,13 +15,18 @@ public class PlayerController : MonoBehaviour
     public BoxCollider2D boxCollider;
     public Animator animator; 
     public SpriteRenderer sprite;
+    public Transform lightAttack;
 
+    private Transform _lightAttackTrans;
+    private SpriteRenderer _lightAttackSprite;
+    
     private float moveDirection;
     private float groundMove;
     private float airMove;
     private bool moveAble;
     private float yScale;
     private int crouched = 0;
+    private float lightAttackCooldown = 4;
 
     public int hp = 10;
     [SerializeField] public float lerpRate = 4f;
@@ -38,6 +43,10 @@ public class PlayerController : MonoBehaviour
         yScale = boxCollider.size.y/2f + Math.Abs(boxCollider.offset.y);
         animator = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+
+        lightAttack = transform.Find("LightAtk");
+        _lightAttackTrans = lightAttack.GetComponent<Transform>();
+        _lightAttackSprite = lightAttack.GetComponent<SpriteRenderer>();
         trans = rb.transform;
         moveAble = true;
     }
@@ -72,7 +81,8 @@ public class PlayerController : MonoBehaviour
     }
 
     public void Crouch(InputAction.CallbackContext context){
-        //want to pick a point thats like, player.transform.lossyscale.y - 10, and if there's only background there lerp to it 
+        //want to pick a point thats like, player.transform.lossyscale.y - 10, and if there's only background there lerp to it
+        print("crouch attempt"); 
         RaycastHit2D hit = Physics2D.Raycast((Vector2)trans.position + Vector2.down*crouchcheck, Vector2.down, 1,8);
         if (hit == false && isGrounded()){
             moveAble = false;
@@ -81,6 +91,22 @@ public class PlayerController : MonoBehaviour
         }
         print(hit == false);
         crouched = 10;
+    }
+
+    public void Fire(InputAction.CallbackContext context){
+        print("Fire attempt");
+        if (lightAttackCooldown == 0){
+            _lightAttackSprite.color = Color.red;
+            Collider2D[] enemies = Physics2D.OverlapCircleAll(_lightAttackTrans.position, _lightAttackTrans.lossyScale.x, 32);
+            if (enemies.Length > 0){
+                foreach (Collider2D enemy in enemies){
+                    PlayMakerFSM fsm = enemy.gameObject.GetComponent<PlayMakerFSM>();
+                    fsm.SendEvent("Take Damage");
+                }
+            }
+            lightAttackCooldown = 10;
+        }
+        //TODO: implement 
     }
 
     //Method which accounts for the case where the player presses button too early 
@@ -96,37 +122,6 @@ public class PlayerController : MonoBehaviour
             }
             yield return null;
         }
-    }
-
-    public void FixedUpdate()
-    {
-        if (moveAble)
-        {
-            if (!isGrounded())
-            {
-                moveDirection = airMove;
-            }
-            else
-            {
-                moveDirection = groundMove;
-            }
-            if (rb.velocity.y < 0)
-            {
-                rb.velocity = new Vector2(moveDirection * moveSpeed, rb.velocity.y + fallMultiplier * Physics.gravity.y * Time.deltaTime);
-            }
-            else
-            {
-                rb.velocity = new Vector2(moveDirection * moveSpeed, rb.velocity.y);
-            }
-        }
-
-        if (crouched > 0)
-        {
-            crouched --;
-        }
-            
-        sprite.flipX = rb.velocity.x < 0;
-        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
     }
 
     public void GrabPlatform(Vector2 target)
@@ -167,8 +162,43 @@ public class PlayerController : MonoBehaviour
 
     public void Bounce(){
         rb.velocity += Vector2.up *jumpPower *1.5f;
-        Debug.Log("bounced");
     }
 
+    public void FixedUpdate()
+    {
+        if (moveAble)
+        {
+            if (!isGrounded())
+            {
+                moveDirection = airMove;
+            }
+            else
+            {
+                moveDirection = groundMove;
+            }
+            if (rb.velocity.y < 0)
+            {
+                rb.velocity = new Vector2(moveDirection * moveSpeed, rb.velocity.y + fallMultiplier * Physics.gravity.y * Time.deltaTime);
+            }
+            else
+            {
+                rb.velocity = new Vector2(moveDirection * moveSpeed, rb.velocity.y);
+            }
+        }
 
+        if (crouched > 0)
+        {
+            crouched --;
+        }
+
+        if (lightAttackCooldown > 0){
+            lightAttackCooldown --;
+            if (lightAttackCooldown == 2){
+                _lightAttackSprite.color = Color.clear;
+            }
+        }
+            
+        sprite.flipX = rb.velocity.x < 0;
+        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+    }
 }
