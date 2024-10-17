@@ -213,6 +213,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13db73433c4000444a2cf031488fb36b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &354839056 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 360924072576474764, guid: b675dc7028a517c4593704dacfe1b1af, type: 3}
+  m_PrefabInstance: {fileID: 1478356963}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &354839059 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 2712894295366223937, guid: b675dc7028a517c4593704dacfe1b1af, type: 3}
+  m_PrefabInstance: {fileID: 1478356963}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &354839060 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8738053056734070989, guid: b675dc7028a517c4593704dacfe1b1af, type: 3}
+  m_PrefabInstance: {fileID: 1478356963}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &369472529 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6310999519872330355, guid: b2623c1a11a29bd429de83c61632fda0, type: 3}
@@ -6427,6 +6442,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3853941486527183306, guid: b675dc7028a517c4593704dacfe1b1af, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 354839060}
+    - target: {fileID: 3853941486527183306, guid: b675dc7028a517c4593704dacfe1b1af, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 354839056}
+    - target: {fileID: 3853941486527183306, guid: b675dc7028a517c4593704dacfe1b1af, type: 3}
       propertyPath: jumpPower
       value: 10
       objectReference: {fileID: 0}
@@ -6434,6 +6457,10 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 3853941486527183306, guid: b675dc7028a517c4593704dacfe1b1af, type: 3}
+      propertyPath: boxCollider
+      value: 
+      objectReference: {fileID: 354839059}
     - target: {fileID: 3853941486527183306, guid: b675dc7028a517c4593704dacfe1b1af, type: 3}
       propertyPath: crouchcheck
       value: 4

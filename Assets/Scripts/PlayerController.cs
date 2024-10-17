@@ -34,11 +34,11 @@ public class PlayerController : MonoBehaviour
 
     public int hp = 10;
     [SerializeField] public float lerpRate = 4f;
-    [Range(0.1f, 10f)] public float jumpPower;
+    private float jumpPower = 15;
     public int jumpsLeft = 3;
     public float crouchcheck = 4;
-    public float fallMultiplier = 1.1f;
-    [Range(0.1f, 100f)] public float moveSpeed;
+    public float fallMultiplier = 4.5f;
+    private float moveSpeed = 800;
 
     void Awake()
     {
@@ -178,7 +178,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private bool Jumpable(){
-        print(wallGrabbing && jumpsLeft > 0);
+//        print(wallGrabbing && jumpsLeft > 0);
         if (wallGrabbing && jumpsLeft > 0 ){
             return true;
         }
@@ -189,10 +189,6 @@ public class PlayerController : MonoBehaviour
     public int TakeDamage(int hit){
         hp -= hit;
         return hit;
-    }
-
-    public void Bounce(){
-        rb.velocity += Vector2.up *jumpPower *1.5f;
     }
 
     public void FixedUpdate()
@@ -220,11 +216,12 @@ public class PlayerController : MonoBehaviour
 
             if (rb.velocity.y < 0)
             {
-                rb.velocity = new Vector2(moveDirection * moveSpeed, rb.velocity.y + fallMultiplier * Physics.gravity.y * Time.deltaTime);
+                rb.velocity = new Vector2(moveDirection * moveSpeed * Time.deltaTime, rb.velocity.y + Time.deltaTime * Physics2D.gravity.y * fallMultiplier);
             }
+            //the signs aren't even correct? 
             else
             {
-                rb.velocity = new Vector2(moveDirection * moveSpeed, rb.velocity.y);
+                rb.velocity = new Vector2(moveDirection * moveSpeed * Time.deltaTime, rb.velocity.y + Physics2D.gravity.y * Time.deltaTime);
             }
         }
 
@@ -239,6 +236,9 @@ public class PlayerController : MonoBehaviour
                 _lightAttackSprite.color = Color.clear;
             }
         }
+
+        //I had a problem like this on A1, I was not updating velocity.y properly, something about setting it to a 
+        //really high number but not carrying over the velocity from last frame?? so just 1 frame got the jump velocity
             
         sprite.flipX = rb.velocity.x < 0;
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
